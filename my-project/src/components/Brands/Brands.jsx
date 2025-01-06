@@ -13,8 +13,8 @@ const Brands = () => {
       <img src={Brand1} alt="brand" className='w-[110px]' />
       <img src={Brand2} alt="brand" className='w-[110px]' />
       <img src={Brand3} alt="brand" className='w-[110px]' />
-      <img src={Brand4} alt="brand" className='w-[110px]'/>
-      <img src={Brand5} alt="brand" className='w-[110px]'/>
+      <img src={Brand4} alt="brand" className='w-[110px]' />
+      <img src={Brand5} alt="brand" className='w-[110px]' />
     </div>
    </div>
    </>
