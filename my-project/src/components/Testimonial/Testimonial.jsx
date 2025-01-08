@@ -30,29 +30,37 @@ const TestimonialData = [
 const Testimonial = () => {
   return (
     <>
-    <div className='container py-14'>
+    <div className=' py-14'>
       {/*Heading title*/}
     <div className='space-y-4 text-center max-w-[550px] mx-auto mb-8'>
         <h1 className='text-4xl font-bold font-serif'>Words from our customers</h1>
         <p className='text-gray-500 text-sm max-w-[350px] mx-auto'>Bring your dream home to life with one-on-one design help & hand picked products</p>
     </div>
     {/* testimonial cards */}
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+     <div className='bg-black p-12'>
+       <div className='container grid grid-cols-1 md:grid-cols-3 gap-10'>
         {TestimonialData.map((card) => {
           return(
-            <div key={card.id}>
+            <div key={card.id} className='border-[1px] border-gray-500 p-5 text-white group hover:bg-white duration-300 group hover:text-black '>
               {/* Uppercase section */}
-              <div className='flex flex-row items-center gap-5'>
+              <div className='  flex flex-row items-center gap-5'>
                 <img src={card.img} alt="" className='w-[80px] rounded-full' />
-                <div>
-                <h1 className='text-sm font-bold'>{card.name}</h1>
-                <p className='text-gray-500 text-xs'>{card.designation}</p>
+                <div >
+                <h1 className='text-sm font-bold group- hover:text-black duration-300'>{card.name}</h1>
+                <p className='text-gray-400 text-xs group- hover:text-black duration-300'>{card.designation}</p>
+                <div className='text-xs mt-2'>⭐⭐⭐⭐⭐</div>
                 </div>
               </div>
+              {/* Bottom section */}
+              <div className='mt-5 border-t-2 border-gray-500/40 pt-5'>
+                <p className='text-sm text-gray-300 group- hover:text-black duration-300'>{card.text}</p>
+              </div>
+
+              
             </div>
           )
         })}
-      </div>
+      </div></div>
     </div>
     </>
   )
