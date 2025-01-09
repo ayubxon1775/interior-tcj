@@ -38,12 +38,12 @@ const Testimonial = () => {
     </div>
     {/* testimonial cards */}
      <div className='bg-black p-12'>
-       <div className='container grid grid-cols-1 md:grid-cols-3 gap-10'>
+       <div className='container grid grid-cols-1 md:grid-cols-3 gap-6'>
         {TestimonialData.map((card) => {
           return(
             <div key={card.id} className='border-[1px] border-gray-500 p-5 text-white group hover:bg-white duration-300 group hover:text-black '>
               {/* Uppercase section */}
-              <div className='  flex flex-row items-center gap-5'>
+              <div className='  flex flex-row items-center gap-3'>
                 <img src={card.img} alt="" className='w-[80px] rounded-full' />
                 <div >
                 <h1 className='text-sm font-bold group- hover:text-black duration-300'>{card.name}</h1>
