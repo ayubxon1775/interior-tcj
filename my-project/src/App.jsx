@@ -7,6 +7,7 @@ import Banner from './components/Banner/Banner'
 import Banner2 from './components/Banner/Banner2'
 import Testimonial from './components/Testimonial/Testimonial'
 import Newsletter from './components/Newsletter/Newsletter'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Banner2/>
       <Testimonial/>
       <Newsletter/>
+      <Footer/>
     </main>
   )
 }
