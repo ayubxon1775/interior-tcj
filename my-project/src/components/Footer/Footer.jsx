@@ -2,10 +2,16 @@ import React from 'react'
 import Logo from '../../assets/Logo.png'
 import {FaPhone} from 'react-icons/fa'
 import { LuMessageSquare } from "react-icons/lu";
+import { delay, motion }  from 'framer-motion'
+import { SlideLeft, SlideUp } from '../../animation/animation'
 
 const Footer = () => {
   return (
-    <footer>
+    <motion.footer
+    variants={SlideLeft(0.2)}
+    initial='initial'
+    whileInView='animate'
+    >
       <div className="container py-11">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company info */}
@@ -54,7 +60,7 @@ const Footer = () => {
           {/* Bottom section */}
           <p className='text-center text-sm font-semibold border-t-2 pt-5 mt-5'>&copy; 2025 TCJ, All rights reserved</p>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

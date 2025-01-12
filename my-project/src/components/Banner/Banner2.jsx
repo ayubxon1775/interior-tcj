@@ -1,5 +1,7 @@
 import React from 'react';
 import Banner1 from '../../assets/banner2.png';
+import { motion } from 'framer-motion';
+import { SlideUp } from '../../animation/animation';
 
 const Banner2 = () => {
   return (
@@ -9,10 +11,22 @@ const Banner2 = () => {
        
         {/* text section */}
         <div className='space-y-5 flex justify-center flex-col'>
-          <h1 className='text-4xl font-bold font-serif'>Simple way to make stylish living room</h1>
-          <p className='text-gray-500 text-sm leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim veritatis quos dolor voluptates delectus adipisci odit repellendus ex eligendi {' '}
-          </p>
-          <div  className='flex gap-3'>
+          <motion.h1 
+          variants={SlideUp(0.2)}
+          initial='initial'
+          whileInView={'animate'}
+          className='text-4xl font-bold font-serif'>Simple way to make stylish living room</motion.h1>
+          <motion.p
+          variants={SlideUp(0.4)}
+          initial='initial'
+          whileInView={'animate'}
+          className='text-gray-500 text-sm leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim veritatis quos dolor voluptates delectus adipisci odit repellendus ex eligendi {' '}
+          </motion.p>
+          <motion.div
+          variants={SlideUp(0.6)}
+          initial='initial'
+          whileInView={'animate'}
+               className='flex gap-3'>
         <div className='max-w-[80px] space-y-2'>
           <p className='text-3xl font-bold font-serif'>15</p>
           <p className='text-gray-500 text-sm'>Years of Experience</p>
@@ -25,14 +39,22 @@ const Banner2 = () => {
           <p className='text-3xl font-bold font-serif'>34</p>
           <p className='text-gray-500 text-sm'>Award Gained</p>
         </div>
-          </div>
+          </motion.div>
           <div>
-          <button className='primary-btn bg-black text-white  shadow-[5px_5px_0px_0px_#6c6c6c]'> Contact Us</button>
+          <motion.button 
+          variants={SlideUp(0.6)}
+          initial='initial'
+          whileInView={'animate'}
+           className='primary-btn bg-black text-white  shadow-[5px_5px_0px_0px_#6c6c6c]'> Contact Us</motion.button>
           </div>
         </div>
          {/* image section */}
          <div className='flex flex-col justify-center items-center'>
-          <img src={Banner1} alt="" className='w-[95%] md:w-full mx-auto'/>
+          <motion.img 
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5}}
+          src={Banner1} alt="" className='w-[95%] md:w-full mx-auto'/>
         </div>
       </div>
     </div>

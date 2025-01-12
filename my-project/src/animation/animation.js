@@ -18,11 +18,11 @@ export const SlideUp = (delay) => {
 export const SlideLeft = (delay) => {
   return {
     initial: {
-      y: 50,
+      x: 100,
       opacity: 0,
     },
     animate: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
