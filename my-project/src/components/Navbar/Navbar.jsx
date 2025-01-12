@@ -31,17 +31,17 @@ const Navbar = () => {
     initial={{ y: -100}}
     animate={{ y: 0}}
     transition={{ duration: 0.5}}
-    className='container py-4 flex justify-between items-center'>
+    className='container py-6 flex justify-between items-center'>
       {/* Logo section */}
     <div className='flex items-center gap-3'>
     <img src={Logo} alt="logo" className='w-10' />
     <span className='text-2xl font-bold'>Interior</span>
     </div>
       {/* Link section */}
-      <div className='hidden md:block'>
+      <div className='hidden md:block !space-x-12'>
         {NavLinks.map((link) => {
           return (
-            <a href={link.link} className='mx-4 text-sm font-semibold'>
+            <a href={link.link} className='inline-block mx-4 text-base font-semibold'>
               {link.title}
             </a>
           )

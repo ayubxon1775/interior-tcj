@@ -58,7 +58,7 @@ const Testimonial = () => {
             variants= {SlideLeft(card.delay)}
             initial='initial'
             whileInView='animate'
-             key={card.id} className='border-[1px] border-gray-500 p-5 text-white group hover:bg-white duration-300 group hover:text-black '>
+             key={card.id} className='border-[1px] border-gray-500  text-white group hover:bg-white duration-300 group  py-10 '>
               {/* Uppercase section */}
               <div className='  flex flex-row items-center gap-3'>
                 <img src={card.img} alt="" className='w-[80px] rounded-full' />

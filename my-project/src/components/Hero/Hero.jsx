@@ -7,19 +7,19 @@ const Hero = () => {
   return (
     <>
     <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[450px] gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[650px] gap-10">
         {/* Text section */}
-        <div className='flex flex-col justify-center gap-5 md:pr-8 lg:pr-14 text-center md:text-left pt-20 md:pt-0 px-10 '>
+        <div className='flex flex-col justify-center gap-8 md:pr-8 xl:pr-52 text-center md:text-left pt-20 md:pt-0 px-10 '>
           <motion.h1
            variants={SlideUp(0.2)}
            initial="initial"
            animate="animate"
-           className='text-3xl font-bold'>SKETCH LUXURY INTERIOR DESIGN</motion.h1>
+           className='text-4xl font-bold font-serif'>SKETCH LUXURY INTERIOR DESIGN</motion.h1>
         <motion.p 
         variants={SlideUp(0.5)}
         initial="initial"
         animate="animate"
-        className='text-sm text-gray-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam dolore quas, necessitatibus obcaecati exercitationem quasi reprehenderit voluptate nam quibusdam?</motion.p>
+        className='text-sm md:text-base text-gray-500 leading-7'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam dolore quas, necessitatibus obcaecati exercitationem quasi reprehenderit voluptate nam quibusdam?</motion.p>
         <div className='space-x-4'>
         <motion.button 
         variants={SlideUp(0.8)}
@@ -40,7 +40,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.5}}
           src={HeroPng} 
           alt="" 
-          className='w-[80%] md:w-[300px] object-cover md:scale-125' />
+          className='w-[80%] md:w-[700px] object-cover' />
         </div>
       </div>
     </div>

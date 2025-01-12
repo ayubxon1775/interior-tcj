@@ -17,7 +17,7 @@ const Banner = () => {
           src={Banner1} alt="" className='w-[95%] md:w-full mx-auto'/>
         </div>
         {/* text section */}
-        <div className='space-y-5 flex justify-center flex-col'>
+        <div className='space-y-5 flex justify-center flex-col xl:max-w-[500px]'>
           <motion.h1
           variants={SlideUp(0.2)}
           initial='initial'
